@@ -7,7 +7,7 @@ let outputEl = document.getElementById("currentTile");
 // Solution Functions...
 function level1Solution() {
   // USE BINARY IF STATEMENT
-  if (column <= 4) {
+  if (column < 5) {
     outputEl.innerHTML = "Sand";
   } else {
     outputEl.innerHTML = "Water";
@@ -16,9 +16,9 @@ function level1Solution() {
 
 function level2Solution() {
   // USE CHAINED IF STATEMENT
-  if (column <= 2) {
+  if (column < 3) {
     outputEl.innerHTML = "Hills";
-  } else if ((column <= 7) & (column >= 3)) {
+  } else if (column < 8 && column > 2) {
     outputEl.innerHTML = "Sand";
   } else {
     outputEl.innerHTML = "Water";
@@ -27,10 +27,10 @@ function level2Solution() {
 
 function level3Solution() {
   // USE BINARY IF STATEMENT
-  if ((column <= 7) & (column >= 3)) {
-    outputEl.innerHTML = "Sand";
-  } else {
+  if (column <= 2 || column >= 8) {
     outputEl.innerHTML = "Hills";
+  } else {
+    outputEl.innerHTML = "Sand";
   }
 }
 
@@ -67,7 +67,7 @@ function level6Solution() {
 
 function level7Solution() {
   // USE BINARY IF STATEMENT
-  if ((row == 4) & (column == 7)) {
+  if (row == 4 && column == 7) {
     outputEl.innerHTML = "Water";
   } else {
     outputEl.innerHTML = "Sand";
